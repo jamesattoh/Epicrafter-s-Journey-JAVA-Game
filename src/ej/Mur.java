@@ -4,7 +4,10 @@ public class Mur extends Bloc {
 	
 	private boolean porteur;
 
-	public Mur(final int longueur, final int largeur, final int hauteur, final boolean porteur){
+	public Mur(final int longueur, final int largeur, final int hauteur, final boolean porteur)
+	
+			throws IllegalBlocException {
+		
 		super(longueur, largeur, hauteur); //call the parent class constructor
 		this.porteur = porteur;
 		this.couleur = Couleur.GRIS;

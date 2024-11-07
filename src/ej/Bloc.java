@@ -5,7 +5,12 @@ public abstract class Bloc implements IBloc { //implements is to outsource every
 	protected int longueur, largeur, hauteur;
 	protected Couleur couleur;
 	
-	public Bloc(final int longueur, final int largeur, final int hauteur){
+	public Bloc(final int longueur, final int largeur, final int hauteur) throws IllegalBlocException {
+		
+		if(longueur < MIN_LONGUEUR || largeur < MIN_LARGEUR || hauteur < MIN_HAUTEUR) {
+			throw new IllegalBlocException();
+		}
+		
 		this.longueur = longueur;
 		this.largeur = largeur;
 		this.hauteur = hauteur;
