@@ -1,7 +1,14 @@
-package ej;
+package ej.blocs;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import ej.IllegalBlocException;
+import ej.PorteVerrouilleException;
 
 public class Porte extends Bloc {
+	
+	private static Logger logger = LogManager.getLogger(Porte.class);
 	
 	private boolean verrouille;
 	
@@ -20,10 +27,13 @@ public class Porte extends Bloc {
 	}
 	
 	public void verrouiller() throws PorteVerrouilleException {
-		if(verrouille == false) {
-			verrouille = true;
-		}else {
+		if(verrouille) {
+		
+			logger.error("La porte ne peut pas être verrouillée car c'est déjà le cas.");
 			throw new PorteVerrouilleException();
+			
+		}else {
+			verrouille = true;
 		}
 	}
 }

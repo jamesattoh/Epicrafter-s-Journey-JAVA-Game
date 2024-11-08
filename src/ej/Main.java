@@ -1,10 +1,14 @@
 package ej;
 
+
+import ej.blocs.Porte;
+
 public class Main {
     
+	
     public static void main(String[] args) {
-        //Kit kitDeDemarrage = new Kit();
-        //kitDeDemarrage.afficherKit();
+        
+    	
         
     	try {
 	    		Porte porte = new Porte(1,2,3,true);

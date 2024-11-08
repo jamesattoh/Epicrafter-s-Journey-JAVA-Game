@@ -2,7 +2,10 @@
 
 /bin/
 /bin/ej/
+/bin/ej.blocs/
 
 .classpath
 .project
 .settings/
+
+/Referenced Libraries/
