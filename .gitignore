@@ -9,3 +9,6 @@
 .settings/
 
 /Referenced Libraries/
+
+/.metadata/
+/.metadata/*
