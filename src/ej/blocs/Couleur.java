@@ -1,9 +1,9 @@
 package ej.blocs;
 
-public enum Couleur { //enums are type to define const elements 
-	VERT,
+public enum Couleur {
 	BLEU,
 	GRIS,
 	MARRON,
-	NOIR;
+	NOIR,
+	VERT
 }
